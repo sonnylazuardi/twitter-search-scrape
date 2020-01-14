@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "public/*",
+      "use": "@now/static"
+    },
+    {
+      "src": "index.js",
+      "use": "@now/node",
+      "config": {
+        "maxLambdaSize": "40mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "methods": [
+        "GET",
+        "POST",
+        "OPTIONS"
+      ],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+        "Access-Control-Allow-Credentials": "true"
+      },
+      "dest": "/index.js"
+    }
+  ]
+}

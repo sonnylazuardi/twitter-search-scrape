@@ -1,0 +1,22 @@
+{
+  "name": "puppet-twitter",
+  "version": "1.0.0",
+  "description": "puppet twitter",
+  "main": "index.js",
+  "scripts": {
+    "build": "yarn",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "puppet",
+    "twitter"
+  ],
+  "author": "sonny",
+  "license": "MIT",
+  "dependencies": {
+    "chrome-aws-lambda": "^2.0.2",
+    "puppeteer": "^2.0.0",
+    "puppeteer-core": "^2.0.0"
+  }
+}
