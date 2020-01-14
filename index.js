@@ -34,6 +34,12 @@ async function search(searchText) {
 
       const TWEET_NAME = ".fullname";
       tweet.name = elements[i].querySelector(TWEET_NAME).textContent;
+
+      const TWEET_AVATAR = ".avatar";
+      tweet.avatar = elements[i]
+        .querySelector(TWEET_AVATAR)
+        .getAttribute("src");
+
       ret.push(tweet);
     }
     return ret;
